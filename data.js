@@ -1,8 +1,8 @@
-// NZ 2025 行程資料
+// NZ 2026 行程資料
 const DAYS = [
   // ── 南島 ──────────────────────────────────────────────────
   {
-    id: 1, island: 'south', date: '9/19', dateISO: '2025-09-19',
+    id: 1, island: 'south', date: '9/19', dateISO: '2026-09-19',
     label: 'Day 1', title: '基督城', subtitle: '抵達整備・超市大採買',
     photo: 'christchurch',
     coords: [-43.5320, 172.6362],
@@ -32,7 +32,7 @@ const DAYS = [
     },
   },
   {
-    id: 2, island: 'south', date: '9/20', dateISO: '2025-09-20',
+    id: 2, island: 'south', date: '9/20', dateISO: '2026-09-20',
     label: 'Day 2', title: '蒂卡波湖', subtitle: 'Lake Tekapo・星空前奏',
     photo: 'lake+tekapo+new+zealand',
     coords: [-44.0047, 170.4775],
@@ -67,7 +67,7 @@ const DAYS = [
     },
   },
   {
-    id: 3, island: 'south', date: '9/21', dateISO: '2025-09-21',
+    id: 3, island: 'south', date: '9/21', dateISO: '2026-09-21',
     label: 'Day 3', title: '蒂卡波湖', subtitle: '悠閒湖日・藍色牛奶湖',
     photo: 'tekapo+lake+church+new+zealand',
     coords: [-44.0047, 170.4775],
@@ -102,7 +102,7 @@ const DAYS = [
     },
   },
   {
-    id: 4, island: 'south', date: '9/22', dateISO: '2025-09-22',
+    id: 4, island: 'south', date: '9/22', dateISO: '2026-09-22',
     label: 'Day 4', title: '庫克山', subtitle: 'Aoraki Mount Cook・冰河之巔',
     photo: 'mount+cook+new+zealand+glacier',
     coords: [-43.7350, 170.0978],
@@ -139,7 +139,7 @@ const DAYS = [
     },
   },
   {
-    id: 5, island: 'south', date: '9/23', dateISO: '2025-09-23',
+    id: 5, island: 'south', date: '9/23', dateISO: '2026-09-23',
     label: 'Day 5', title: '瓦納卡', subtitle: 'Wanaka・跨越山嶺',
     photo: 'wanaka+lake+new+zealand',
     coords: [-44.6993, 169.1318],
@@ -175,7 +175,7 @@ const DAYS = [
     },
   },
   {
-    id: 6, island: 'south', date: '9/24', dateISO: '2025-09-24',
+    id: 6, island: 'south', date: '9/24', dateISO: '2026-09-24',
     label: 'Day 6', title: '皇后鎮', subtitle: 'Queenstown・湖畔漫活',
     photo: 'queenstown+new+zealand+lake',
     coords: [-45.0312, 168.6626],
@@ -210,7 +210,7 @@ const DAYS = [
     },
   },
   {
-    id: 7, island: 'south', date: '9/25', dateISO: '2025-09-25',
+    id: 7, island: 'south', date: '9/25', dateISO: '2026-09-25',
     label: 'Day 7', title: '皇后鎮', subtitle: 'Deer Park・纜車・滑板車',
     photo: 'queenstown+skyline+gondola',
     coords: [-45.0312, 168.6626],
@@ -245,7 +245,7 @@ const DAYS = [
     },
   },
   {
-    id: 8, island: 'south', date: '9/26', dateISO: '2025-09-26',
+    id: 8, island: 'south', date: '9/26', dateISO: '2026-09-26',
     label: 'Day 8', title: '米佛峽灣', subtitle: 'Milford Sound・峽灣一日遊',
     photo: 'milford+sound+new+zealand+fiord',
     coords: [-44.6413, 167.8975],
@@ -281,7 +281,7 @@ const DAYS = [
     },
   },
   {
-    id: 9, island: 'south', date: '9/27', dateISO: '2025-09-27',
+    id: 9, island: 'south', date: '9/27', dateISO: '2026-09-27',
     label: 'Day 9', title: '奧馬魯', subtitle: 'Oamaru・企鵝歸巢',
     photo: 'oamaru+victorian+new+zealand',
     coords: [-45.0966, 170.9714],
@@ -318,7 +318,7 @@ const DAYS = [
     },
   },
   {
-    id: 10, island: 'south', date: '9/28', dateISO: '2025-09-28',
+    id: 10, island: 'south', date: '9/28', dateISO: '2026-09-28',
     label: 'Day 10', title: '基督城離境', subtitle: '南島終點・飛往奧克蘭',
     photo: 'christchurch+city+centre',
     coords: [-43.5320, 172.6362],
@@ -348,7 +348,7 @@ const DAYS = [
 
   // ── 北島 ──────────────────────────────────────────────────
   {
-    id: 11, island: 'north', date: '9/28', dateISO: '2025-09-28',
+    id: 11, island: 'north', date: '9/28', dateISO: '2026-09-28',
     label: 'Day 1N', title: '奧克蘭', subtitle: 'Auckland・北島出發',
     photo: 'auckland+viaduct+harbour+night',
     coords: [-36.8485, 174.7633],
@@ -375,7 +375,7 @@ const DAYS = [
     },
   },
   {
-    id: 12, island: 'north', date: '9/29', dateISO: '2025-09-29',
+    id: 12, island: 'north', date: '9/29', dateISO: '2026-09-29',
     label: 'Day 2N', title: '哈比村', subtitle: 'Hobbiton・魔戒電影場景',
     photo: 'hobbiton+movie+set+new+zealand',
     coords: [-37.8578, 175.6824],
@@ -409,7 +409,7 @@ const DAYS = [
     },
   },
   {
-    id: 13, island: 'north', date: '9/30', dateISO: '2025-09-30',
+    id: 13, island: 'north', date: '9/30', dateISO: '2026-09-30',
     label: 'Day 3N', title: '懷托摩', subtitle: 'Waitomo・螢火蟲洞',
     photo: 'waitomo+glowworm+caves+new+zealand',
     coords: [-38.2614, 175.1058],
@@ -444,7 +444,7 @@ const DAYS = [
     },
   },
   {
-    id: 14, island: 'north', date: '10/1', dateISO: '2025-10-01',
+    id: 14, island: 'north', date: '10/1', dateISO: '2026-10-01',
     label: 'Day 4N', title: 'Hamilton → Tauranga', subtitle: '花園城市・藍色泉水',
     photo: 'hamilton+gardens+new+zealand',
     coords: [-37.7870, 175.2793],
@@ -479,7 +479,7 @@ const DAYS = [
     },
   },
   {
-    id: 15, island: 'north', date: '10/2', dateISO: '2025-10-02',
+    id: 15, island: 'north', date: '10/2', dateISO: '2026-10-02',
     label: 'Day 5N', title: 'Tauranga → Whitianga', subtitle: '科羅曼德半島・海蝕拱門',
     photo: 'cathedral+cove+coromandel+new+zealand',
     coords: [-36.8322, 175.7017],
@@ -513,7 +513,7 @@ const DAYS = [
     },
   },
   {
-    id: 16, island: 'north', date: '10/3', dateISO: '2025-10-03',
+    id: 16, island: 'north', date: '10/3', dateISO: '2026-10-03',
     label: 'Day 6N', title: 'Whitianga → 奧克蘭', subtitle: '科羅曼德鐵路・返回奧克蘭',
     photo: 'coromandel+town+new+zealand',
     coords: [-36.7590, 175.4953],
@@ -548,7 +548,7 @@ const DAYS = [
     },
   },
   {
-    id: 17, island: 'north', date: '10/4', dateISO: '2025-10-04',
+    id: 17, island: 'north', date: '10/4', dateISO: '2026-10-04',
     label: 'Day 7N', title: '奧克蘭離境', subtitle: '返家',
     photo: 'auckland+airport+new+zealand',
     coords: [-36.8485, 174.7633],
