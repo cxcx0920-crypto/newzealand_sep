@@ -222,6 +222,8 @@ function renderDay(day) {
        <div style="font-size:0.75rem;color:#6B7280;margin-top:4px;padding-left:4px;">💬 ${day.route.note}</div>`
     : `<div class="route-badge ok"><span class="icon">📍</span><span>${day.route.note}</span></div>`;
 
+  const stayHTML = day.stay ? `<div class="route-badge stay"><span class="icon">🏠</span><span>${day.stay}</span></div>` : '';
+
   section.innerHTML = `
     <div class="day-hero" onclick="scrollToDay(${day.id})">
       <img src="${unsplashUrl(day.photo, 800, 360)}" alt="${day.title}" loading="lazy"
@@ -235,6 +237,7 @@ function renderDay(day) {
     <div class="day-body">
       ${warnHTML}
       ${routeBadge}
+      ${stayHTML}
       <div>
         <div class="sec-header"><span>📅</span> 今日時程</div>
         <ul class="timeline">${tlHTML}</ul>

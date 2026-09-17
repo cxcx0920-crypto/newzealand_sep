@@ -111,6 +111,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--nav
 }
 .route-badge.ok { background: #dcfce7; color: #166534; }
 .route-badge.detour { background: #fef3c7; color: #92400e; }
+.route-badge.stay { background: #eef2ff; color: #3730a3; }
 .route-badge .icon { font-size: 1rem; }
 
 /* TIMELINE */
@@ -218,6 +219,23 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--nav
   display: flex; gap: 8px; align-items: flex-start;
 }
 
+/* TRIP NOTES PANEL */
+#tripNotes {
+  background: #fff; border-bottom: 1px solid #e9ecef;
+}
+#tripNotes summary {
+  cursor: pointer; padding: 10px 20px; font-weight: 600; font-size: 0.85rem;
+  color: var(--navy); list-style: none; display: flex; align-items: center; gap: 8px;
+}
+#tripNotes summary::-webkit-details-marker { display: none; }
+#tripNotes summary::before { content: '▸'; color: var(--gold); transition: transform 0.2s; }
+#tripNotes[open] summary::before { transform: rotate(90deg); }
+.notes-body { padding: 0 20px 16px 20px; font-size: 0.8rem; line-height: 1.6; color: var(--navy); }
+.notes-body h4 { font-size: 0.78rem; margin: 10px 0 4px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+.notes-body table { width: 100%; border-collapse: collapse; font-size: 0.76rem; margin-bottom: 6px; }
+.notes-body td, .notes-body th { border: 1px solid #e5e7eb; padding: 5px 8px; text-align: left; vertical-align: top; }
+.notes-body th { background: #f3f4f6; }
+
 /* MOBILE */
 @media (max-width: 768px) {
   #main-layout { grid-template-columns: 1fr; }
@@ -239,6 +257,43 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--nav
   </div>
   <div class="nav-row2" id="dayNav"></div>
 </nav>
+
+<details id="tripNotes">
+  <summary>📌 行前必讀：超市攻略・團體提醒・待確認事項</summary>
+  <div class="notes-body">
+    <p>🧑‍🤝‍🧑 <b>出遊人數：9 位大人</b> — 所有訂位務必先確認餐廳可容納人數（Twenty Seven Steps 最多只收8位，已詢問中）。</p>
+
+    <h4>🛒 超市攻略</h4>
+    <table>
+      <tr><th>超市</th><th>定位</th><th>必買/注意</th></tr>
+      <tr><td>Countdown / Woolworths</td><td>最普及，價位居中</td><td>隨時補給首選，Onecard會員價可請店員刷卡</td></tr>
+      <tr><td>Four Square / FreshChoice</td><td>小鎮唯一補給站</td><td>比都會區貴10–20%，注意打烊時間</td></tr>
+      <tr><td>PAK'nSAVE</td><td>最便宜量販超市</td><td>大城市火力採購首選，需自備購物袋</td></tr>
+      <tr><td>New World</td><td>精緻質感、熟食佳</td><td>伴手禮/麥蘆卡蜂蜜/Puhoi Valley焦糖牛奶，結帳可索取Tourist Club Card</td></tr>
+    </table>
+
+    <h4>🏍️ 重機選配（北島路段）</h4>
+    <p>已確認：部分人騎重機、其他人坐12人座車照原行程，兩隊需約好每天集合／過夜地點。車款尚未決定：</p>
+    <table>
+      <tr><th>引擎型式</th><th>排氣量</th><th>3天租金 (NZD)</th></tr>
+      <tr><td>並列雙缸</td><td>500cc</td><td>$9,350</td></tr>
+      <tr><td>V型雙缸</td><td>650cc</td><td>$9,900</td></tr>
+      <tr><td>並列雙缸</td><td>750cc</td><td>$12,600</td></tr>
+      <tr><td>並列雙缸</td><td>800cc</td><td>$12,900</td></tr>
+      <tr><td>V型雙缸</td><td>1000cc</td><td>$11,500</td></tr>
+      <tr><td>並列雙缸</td><td>1100cc</td><td>$15,800</td></tr>
+      <tr><td>水平對臥雙缸</td><td>1200cc</td><td>$17,000</td></tr>
+    </table>
+
+    <h4>❓ 待確認事項</h4>
+    <p>
+      • 重機租哪一款、幾位大人參加、從哪天開始騎/騎幾天、兩隊在哪裡會合。<br>
+      • Day 9（皇后鎮→基督城）簡報簡化為「維多利亞遺產區→Mall晚餐」，是否仍保留藍企鵝＋Riverstone Kitchen完整版。<br>
+      • 鮭魚行程採 Day 3 專程來回 High Country Salmon，或維持 Day 5 順路吃。<br>
+      • Twenty Seven Steps（9/19）9人訂位是否已確認。
+    </p>
+  </div>
+</details>
 
 <div id="main-layout">
   <div id="timeline-col" id="timelineCol"></div>

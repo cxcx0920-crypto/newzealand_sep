@@ -7,6 +7,8 @@ const DAYS = [
     photo: 'christchurch',
     coords: [-43.5320, 172.6362],
     route: { text: '機場 → Riccarton 超市 → 別墅', km: 15, ok: true, note: '取車後直接採買，完全順路' },
+    stay: '基督城市區包棟別墅（近超市與交通主幹道）',
+    warnings: ['Twenty Seven Steps 最多只能訂8位，我們是9位大人，已傳訊詢問能否加位，待回覆確認'],
     timeline: [
       { time: '12:30', text: '抵達基督城機場・辦理取車' },
       { time: '14:00', text: 'New World / Pak\'nSave Riccarton 大採買' },
@@ -25,9 +27,9 @@ const DAYS = [
         { name: 'Soul Quarter', type: '美式/歐陸', price: 'NZD $20–35', hours: '11:00–22:00', note: '' },
       ],
       dinner: [
-        { name: 'Inati', type: '當代紐西蘭料理', price: 'NZD $120–150', hours: '17:30–22:00', note: '需訂位' },
-        { name: 'Chillingworth Road', type: '5–9道套餐', price: 'NZD $100–180', hours: '18:00–22:00', note: '需訂位' },
-        { name: 'Rascal', type: '當代酒館料理', price: 'NZD $40–70', hours: '17:00–22:00', note: '' },
+        { name: 'Twenty Seven Steps', type: '復古新攝政街・現代歐美豐盛NZ菜', price: 'NZD $45–70', hours: '17:00–22:00', note: '已選定・9人訂位待確認' },
+        { name: 'Earl', type: '海岸歐陸餐酒館', price: 'NZD $40–70', hours: '11:00–22:00', note: '可線上訂位' },
+        { name: 'Inati', type: '當代紐西蘭主廚餐桌', price: 'NZD $120–150', hours: '17:30–22:00', note: '需訂位，精緻備案' },
       ],
     },
   },
@@ -37,7 +39,9 @@ const DAYS = [
     photo: 'lake+tekapo+new+zealand',
     coords: [-44.0047, 170.4775],
     route: { text: '基督城 → Fairlie → Lake Tekapo (SH79)', km: 220, ok: true, note: '沿途經 Fairlie 順路吃派，路況良好' },
+    stay: 'Tekapo 景觀包棟別墅（連住2晚）',
     timeline: [
+      { time: '07:30', text: '出發前：Le Bakerman 或 Hello Sunday 吃早餐' },
       { time: '08:30', text: '出發，沿 SH79 南下' },
       { time: '10:30', text: '🥧 Fairlie Bakehouse 停留（必吃鹿肉派）' },
       { time: '12:30', text: '抵達 Lake Tekapo，午餐' },
@@ -52,7 +56,9 @@ const DAYS = [
     ],
     meals: {
       breakfast: [
-        { name: '別墅自煮', type: '（採買食材）', price: '－', hours: '－', note: '' },
+        { name: 'Le Bakerman', type: '肉派', price: 'NZD $8–15', hours: '07:00–15:00', note: '已選定・週末Special要早起搶' },
+        { name: 'Hello Sunday', type: '創意早午餐', price: 'NZD $15–30', hours: '07:00–15:00', note: '熱門需訂位' },
+        { name: '機上剩餘乾糧', type: '', price: '－', hours: '－', note: '' },
       ],
       lunch: [
         { name: 'The Greedy Cow', type: 'NZ咖啡廳燒烤', price: 'NZD $15–35', hours: '08:00–20:00', note: '份量大' },
@@ -60,9 +66,9 @@ const DAYS = [
         { name: 'Dark Sky Diner', type: '湖畔全日餐廳', price: 'NZD $20–40', hours: '08:00–21:00', note: '景色佳' },
       ],
       dinner: [
-        { name: 'Kohan Japanese Restaurant', type: '日式料理', price: 'NZD $25–50', hours: '11:30–21:00', note: '觀星前吃飽' },
-        { name: 'Blue Lake Eatery & Bar', type: '當代NZ料理', price: 'NZD $30–55', hours: '17:00–22:00', note: '湖景晚餐' },
-        { name: 'Fishtail Restaurant', type: '尼泊爾/印度融合', price: 'NZD $20–40', hours: '17:00–21:00', note: '' },
+        { name: '別墅自煮', type: '', price: '－', hours: '－', note: '已選定・觀星前簡單吃飽即可' },
+        { name: 'Kohan Japanese Restaurant', type: '日式料理', price: 'NZD $25–50', hours: '11:30–21:00', note: '' },
+        { name: 'Blue Lake Eatery & Bar', type: '當代NZ料理', price: 'NZD $30–55', hours: '17:00–22:00', note: '' },
       ],
     },
   },
@@ -71,11 +77,14 @@ const DAYS = [
     label: 'Day 3', title: '蒂卡波湖', subtitle: '悠閒湖日・藍色牛奶湖',
     photo: 'tekapo+lake+church+new+zealand',
     coords: [-44.0047, 170.4775],
-    route: { text: '全天留守 Tekapo', km: 0, ok: true, note: '休息日，步行可達所有景點' },
+    route: { text: 'Tekapo ↔ Twizel (High Country Salmon)，其餘全天留守', km: 80, ok: true, note: '休息日加碼一趟鮭魚農場小旅行，Twizel單程約40分鐘' },
+    stay: 'Tekapo 景觀包棟別墅（連住第2晚）',
+    warnings: ['簡報把 High Country Salmon 從Day 5（順路）改到這天專程從Tekapo來回，也可維持原案留到Day 5順路吃，兩種都可行，請確認想要的版本'],
     timeline: [
       { time: '09:00', text: 'Mt. John 山頂咖啡廳（土耳其藍湖景）' },
       { time: '11:00', text: '好牧羊人教堂周邊拍照（最佳光線時段）' },
-      { time: '14:00', text: 'Lake Alexandrina 步道 或 溫泉放鬆' },
+      { time: '12:30', text: '🐟 開車前往 Twizel，High Country Salmon 鮭魚農場用餐' },
+      { time: '15:30', text: '返回Tekapo，Lake Alexandrina 步道 或 溫泉放鬆' },
       { time: '18:00', text: '湖邊等待夕陽' },
     ],
     attractions: [
@@ -90,9 +99,9 @@ const DAYS = [
         { name: '別墅自煮', type: '', price: '－', hours: '－', note: '' },
       ],
       lunch: [
+        { name: 'High Country Salmon (Twizel)', type: '高山淡水國王鮭魚', price: 'NZD $30–50', hours: '10:00–16:00', note: '已選定・可體驗餵鮭魚' },
         { name: 'The Greedy Cow', type: 'NZ咖啡廳', price: 'NZD $15–35', hours: '08:00–20:00', note: '' },
         { name: 'Dark Sky Diner', type: '湖畔輕食', price: 'NZD $15–30', hours: '08:00–21:00', note: '' },
-        { name: '別墅自煮野餐', type: '', price: '－', hours: '－', note: '' },
       ],
       dinner: [
         { name: 'Blue Lake Eatery & Bar', type: '當代NZ料理', price: 'NZD $30–55', hours: '17:00–22:00', note: '湖景夜晚' },
@@ -107,6 +116,7 @@ const DAYS = [
     photo: 'mount+cook+new+zealand+glacier',
     coords: [-43.7350, 170.0978],
     route: { text: 'Tekapo → Pukaki湖畔 → Mt Cook (SH8→80)', km: 105, ok: true, note: '沿Pukaki湖的藍色公路極美，必停拍照' },
+    stay: 'Haka House Hostel Aoraki Mt Cook',
     timeline: [
       { time: '07:30', text: '出發，沿 Pukaki 湖岸行駛（停留拍照）' },
       { time: '08:45', text: '🚁 直升機冰川健行 Heli-Hike（已預訂，3小時）' },
@@ -114,7 +124,10 @@ const DAYS = [
       { time: '14:00', text: 'Hooker Valley Track（建議走）' },
       { time: '17:00', text: 'Tasman 冰川觀景台' },
     ],
-    warnings: ['Alpine Restaurant 午市 10/1 起開放，9/22 午餐以 Sir Ed Hillary Cafe 為主'],
+    warnings: [
+      'Alpine Restaurant 午市 10/1 起開放，9/22 午餐以 Sir Ed Hillary Cafe 為主',
+      '晚餐已選定 Alpine Buffet Dinner，需下午5點前完成訂位',
+    ],
     attractions: [
       { icon: '🥾', name: 'Hooker Valley Track', desc: 'NZ最經典步道，3座吊橋通往冰河湖，可見冰山，來回3–4小時', hours: '全天', price: '免費', lat: -43.7380, lng: 170.0960 },
       { icon: '🏔️', name: 'Tasman 冰川觀景台', desc: '30分鐘步道，俯瞰南半球最長冰川，接Blue Lakes延伸步道', hours: '全天', price: '免費', lat: -43.6800, lng: 170.1750 },
@@ -127,13 +140,13 @@ const DAYS = [
         { name: 'Tekapo 出發前吃完', type: '', price: '－', hours: '－', note: '' },
       ],
       lunch: [
+        { name: '隨便吃／自備野餐', type: '行程滿檔，簡單解決即可', price: '－', hours: '－', note: '' },
         { name: 'Sir Edmund Hillary Cafe & Bar', type: '輕食/三明治', price: 'NZD $10–25', hours: '08:00–17:00', note: '9月午市最可靠' },
-        { name: '自備野餐', type: '（步道上享用）', price: '－', hours: '－', note: '' },
         { name: 'Alpine Restaurant（確認是否有午市）', type: '自助餐', price: 'NZD $65', hours: '待確認', note: '需致電確認' },
       ],
       dinner: [
+        { name: 'Alpine Buffet Dinner', type: '國際自助餐', price: 'NZD $89', hours: '18:00–21:30', note: '已選定・5PM前需訂位' },
         { name: 'Panorama Room', type: '現代NZ精緻料理', price: 'NZD $125', hours: '18:00–21:00', note: '需訂位，15歲以上' },
-        { name: 'Alpine Restaurant 自助晚餐', type: '國際自助餐', price: 'NZD $89', hours: '18:00–21:30', note: '最多選擇' },
         { name: 'Sir Edmund Hillary Cafe 輕食', type: '輕食', price: 'NZD $10–25', hours: '08:00–17:00', note: '' },
       ],
     },
@@ -143,15 +156,20 @@ const DAYS = [
     label: 'Day 5', title: '瓦納卡', subtitle: 'Wanaka・跨越山嶺',
     photo: 'wanaka+lake+new+zealand',
     coords: [-44.6993, 169.1318],
-    route: { text: 'Mt Cook → Omarama → Lindis Pass (SH8) → Wanaka', km: 200, ok: true, note: 'Lindis Pass高原公路壯闊，途中停 High Country Salmon 農場' },
+    route: { text: 'Mt Cook → Omarama → Lindis Pass (SH8) → Wanaka', km: 200, ok: true, note: 'Lindis Pass高原公路壯闊' },
+    stay: '紐西蘭 Otago Region Wānaka 整套房源',
     timeline: [
       { time: '09:00', text: '退房出發' },
-      { time: '11:00', text: '🐟 High Country Salmon 鮭魚農場（午餐+餵魚體驗）' },
-      { time: '13:30', text: '抵達 Wanaka，入住別墅' },
+      { time: '11:00', text: '🎣 HOOK 自釣鮭魚體驗（新增，休息用餐）' },
+      { time: '13:00', text: 'Charlie Brown Crepes 簡單吃小點' },
+      { time: '13:30', text: '抵達 Wanaka，入住' },
       { time: '15:00', text: 'Wanaka 市區 + 湖邊散步' },
       { time: '16:30', text: '🏔️ Mount Iron Track（替代 Roys Peak）' },
     ],
-    warnings: ['Roys Peak 8/1–10/31 封閉（羊羔季），請改走 Mount Iron Track'],
+    warnings: [
+      'Roys Peak 8/1–10/31 封閉（羊羔季），請改走 Mount Iron Track',
+      'HOOK 自釣鮭魚僅有活動名稱，出發前需查證正確店名/地址及是否需預約；原High Country Salmon已改到Day 3',
+    ],
     attractions: [
       { icon: '🏔️', name: 'Mount Iron Track', desc: 'Wanaka鎮邊環形步道，1.5小時，360度全景，9月開放', hours: '全天', price: '免費', lat: -44.7077, lng: 169.1636 },
       { icon: '🌳', name: 'Wanaka 孤獨樹（That Wanaka Tree）', desc: '湖中標誌性柳樹，早晨光線最美', hours: '全天', price: '免費', lat: -44.6974, lng: 169.1285 },
@@ -163,13 +181,13 @@ const DAYS = [
         { name: 'Sir Edmund Hillary Cafe (Hermitage)', type: '', price: 'NZD $10–25', hours: '08:00–17:00', note: '出發前' },
       ],
       lunch: [
-        { name: 'High Country Salmon 農場餐廳', type: '鮭魚料理', price: 'NZD $30–50', hours: '10:00–16:00', note: '順路必停' },
-        { name: 'Charlie Brown Crepes (Wanaka)', type: '可麗餅餐車', price: 'NZD $10–20', hours: '09:00–16:00', note: '' },
+        { name: 'Charlie Brown Crepes (Wanaka)', type: '可麗餅餐車', price: 'NZD $10–20', hours: '09:00–16:00', note: '已選定・隨便吃小點' },
+        { name: 'HOOK 自釣鮭魚現場加工', type: '', price: '－', hours: '－', note: '' },
         { name: 'Wanaka Gourmet Kitchen', type: '慢烤羊肉', price: 'NZD $30–50', hours: '11:00–21:00', note: '' },
       ],
       dinner: [
+        { name: 'Kai Kikokiko', type: 'Slow cooked meats・慢燉肉料理', price: '－', hours: '－', note: '已選定・外帶回住處吃（店名拼法待核對）' },
         { name: 'Kika', type: 'tapas 分享小盤', price: 'NZD $20–50', hours: '12:00–22:00', note: '需訂位' },
-        { name: 'Cinema Paradiso', type: '披薩+電影體驗', price: 'NZD $20–40', hours: '17:00–21:00', note: '特色首選' },
         { name: 'Bistro Gentil', type: '法式精緻料理', price: 'NZD $60–100', hours: '18:00–21:30', note: '山景浪漫' },
       ],
     },
@@ -180,14 +198,17 @@ const DAYS = [
     photo: 'queenstown+new+zealand+lake',
     coords: [-45.0312, 168.6626],
     route: { text: 'Wanaka → Cardrona (SH89) → 皇后鎮', km: 80, ok: true, note: 'Cardrona山路壯麗，或走Cromwell葡萄酒莊路線' },
+    stay: '皇后鎮湖景包棟 Villa（連住3晚）',
+    warnings: ['Deer Park Heights 已從Day 7提前到這天早上，需先線上買票'],
     timeline: [
-      { time: '07:00', text: '清晨拍孤獨樹（光線最佳）' },
-      { time: '09:00', text: 'Puzzling World（若前一天未去）' },
-      { time: '11:00', text: '出發前往皇后鎮' },
+      { time: '07:00', text: '清晨拍孤獨樹 That Wanaka Tree（光線最佳）' },
+      { time: '09:00', text: '🦌 Deer Park Heights（先線上買票，開12人座車入園餵鹿與犛牛）' },
+      { time: '11:30', text: '出發前往皇后鎮' },
       { time: '12:30', text: '抵達皇后鎮，午餐' },
       { time: '14:00', text: '皇后鎮碼頭、市區逛逛' },
     ],
     attractions: [
+      { icon: '🦌', name: 'Deer Park Heights', desc: '開12人座車入園，近距離餵食鹿、犛牛，俯瞰絕美湖景（先線上買票）', hours: '08:00–17:00', price: 'NZD $10/人', lat: -45.038011, lng: 168.698152 },
       { icon: '🌿', name: '皇后鎮花園 Queenstown Gardens', desc: '湖邊免費公園，飛盤高爾夫、玫瑰花園，春天極美', hours: '全天', price: '免費', lat: -45.0337, lng: 168.6600 },
       { icon: '🏘️', name: 'Arrowtown 箭鎮', desc: '20分鐘車程，淘金時代古老小鎮，華人礦工遺址', hours: '全天', price: '免費', lat: -44.9399, lng: 168.8288 },
       { icon: '🍷', name: 'Gibbston Valley 酒莊區', desc: '30分鐘車程，中奧塔哥黑皮諾葡萄酒產地，多家試飲', hours: '10:00–17:00', price: '試飲費用另計', lat: -45.0265, lng: 168.8780 },
@@ -198,12 +219,12 @@ const DAYS = [
         { name: 'Charlie Brown Crepes', type: '可麗餅早餐', price: 'NZD $10–20', hours: '09:00–16:00', note: '' },
       ],
       lunch: [
-        { name: 'Fergbaker', type: 'NZ招牌手工派', price: 'NZD $6–10', hours: '06:00–17:00', note: '平價必試' },
+        { name: 'Fergbaker', type: 'NZ招牌手工派', price: 'NZD $6–10', hours: '06:00–17:00', note: '平價必試・簡單吃' },
         { name: 'Bespoke Kitchen', type: '健康全日早午餐', price: 'NZD $15–30', hours: '07:00–15:00', note: '' },
         { name: 'Erik\'s Fish & Chips', type: '現炸魚薯', price: 'NZD $10–20', hours: '11:00–21:00', note: '' },
       ],
       dinner: [
-        { name: 'Rata', type: '現代NZ精緻料理', price: 'NZD $120–180', hours: '12:00–22:00', note: '需訂位' },
+        { name: 'Harbour Fish', type: '海鮮料理', price: '－', hours: '－', note: '已選定（地址與訂位資訊待確認）' },
         { name: 'Amisfield Winery & Bistro', type: '在地食材+葡萄酒', price: 'NZD $80–130', hours: '12:00–16:00', note: '僅午餐，需訂位' },
         { name: 'The Bunker', type: '野味料理+調酒', price: 'NZD $70–120', hours: '17:00–23:00', note: '隱密酒吧' },
       ],
@@ -215,14 +236,17 @@ const DAYS = [
     photo: 'queenstown+skyline+gondola',
     coords: [-45.0312, 168.6626],
     route: { text: '全天皇后鎮市區', km: 0, ok: true, note: '留守，市區內移動' },
+    stay: '皇后鎮湖景包棟 Villa（連住第2晚）',
+    warnings: ['跳傘為新增行程，需另外預訂業者並確認天候備案；Deer Park Heights已提前到Day 6早上'],
     timeline: [
-      { time: '09:00', text: '🦌 Deer Park Heights（12人座車入園，餵鹿與犛牛）' },
+      { time: '09:00', text: '🪂 跳傘 Skydive（新增行程，需另外預訂）' },
       { time: '12:00', text: '午餐' },
       { time: '14:00', text: '🚡 Skyline 纜車 + Luge 滑板車' },
       { time: '18:00', text: '皇后鎮湖邊夕陽' },
+      { time: '19:00', text: 'Rata 晚餐（需預訂）' },
     ],
     attractions: [
-      { icon: '🦌', name: 'Deer Park Heights', desc: '開12人座車入園，近距離餵食鹿、犛牛，俯瞰絕美湖景', hours: '08:00–17:00', price: 'NZD $10/人', lat: -45.0549, lng: 168.7191 },
+      { icon: '🪂', name: '跳傘 Skydive Queenstown', desc: '高空跳傘俯瞰皇后鎮群山與湖泊，需另外預訂業者，注意天候備案', hours: '依業者安排', price: '另計', lat: -45.0211, lng: 168.6650 },
       { icon: '🚡', name: 'Skyline Gondola + Luge', desc: '纜車上山後玩滑板車，可吃山頂自助餐（NZD $69含纜車）', hours: '10:00–22:00', price: 'NZD $32起', lat: -45.0199, lng: 168.6607 },
       { icon: '💎', name: 'Kawarau Gorge 高空彈跳橋', desc: '世界第一個商業高空彈跳地點，觀看免費', hours: '09:00–17:00', price: '觀看免費', lat: -45.0133, lng: 168.8218 },
     ],
@@ -238,9 +262,9 @@ const DAYS = [
         { name: 'Erik\'s Fish & Chips', type: '輕食', price: 'NZD $10–20', hours: '11:00–21:00', note: '' },
       ],
       dinner: [
+        { name: 'Rata', type: '現代NZ精緻料理（Josh Emett主廚，米其林指南紐西蘭首屆一星）', price: 'NZD $120–180', hours: '12:00–22:00', note: '已選定・週末假日務必提前預訂' },
         { name: 'Amisfield Winery & Bistro', type: '主廚發辦菜單', price: 'NZD $80–130', hours: '12:00–16:00', note: '需訂位' },
         { name: 'The Bunker', type: '野味料理隱密酒吧', price: 'NZD $70–120', hours: '17:00–23:00', note: '' },
-        { name: 'True South Dining Room', type: '得獎精緻料理', price: 'NZD $150+', hours: '18:00–22:00', note: '需訂位' },
       ],
     },
   },
@@ -250,6 +274,7 @@ const DAYS = [
     photo: 'milford+sound+new+zealand+fiord',
     coords: [-44.6413, 167.8975],
     route: { text: '皇后鎮出發大巴 → Te Anau → Milford Sound', km: 290, ok: true, note: '大巴包辦，不用自駕，峽灣公路路況複雜讓司機來' },
+    stay: '皇后鎮湖景包棟 Villa（連住第3晚）',
     timeline: [
       { time: '07:20', text: '出發大巴（已預訂）' },
       { time: '11:00', text: 'Mirror Lakes 鏡湖停靠拍照' },
@@ -274,7 +299,7 @@ const DAYS = [
         { name: 'Te Anau 鎮咖啡廳', type: '（來回途中）', price: 'NZD $15–25', hours: '08:00–17:00', note: '' },
       ],
       dinner: [
-        { name: 'Rata', type: '精緻NZ料理', price: 'NZD $120–180', hours: '12:00–22:00', note: '犒賞自己，需訂位' },
+        { name: '別墅自煮 + Fergburger 外帶', type: '', price: '－', hours: '－', note: '已選定・奔波一天後輕鬆解決' },
         { name: 'The Bunker', type: '野味酒吧', price: 'NZD $70–120', hours: '17:00–23:00', note: '' },
         { name: 'Bespoke Kitchen 輕食晚餐', type: '', price: 'NZD $20–35', hours: '07:00–15:00', note: '需確認晚餐是否供應' },
       ],
@@ -286,6 +311,8 @@ const DAYS = [
     photo: 'oamaru+victorian+new+zealand',
     coords: [-45.0966, 170.9714],
     route: { text: '皇后鎮 → Cromwell → Oamaru (SH8) → 基督城 (SH1)', km: 470, ok: true, note: '奧馬魯完全在回程路上，企鵝看完再返基督城' },
+    stay: '基督城市區酒店（已改為酒店，非別墅）',
+    warnings: ['最新簡報把這天簡化成「逛維多利亞遺產區→晚餐Mall解決」，未提到企鵝歸巢/Steampunk HQ/Riverstone Kitchen，請確認要保留完整版還是簡化版'],
     timeline: [
       { time: '08:00', text: '退房出發' },
       { time: '12:00', text: '抵達奧馬魯，午餐' },
@@ -311,9 +338,9 @@ const DAYS = [
         { name: 'Scott\'s Brewing Co.', type: '精釀啤酒+披薩', price: 'NZD $20–40', hours: '11:00–21:00', note: '' },
       ],
       dinner: [
-        { name: 'Riverstone Kitchen', type: '當代歐式料理', price: 'NZD $50–80', hours: '09:00–16:00', note: 'SH1旁，回程前吃，需訂位' },
-        { name: 'Cucina', type: '義式料理', price: 'NZD $30–55', hours: '11:30–21:00', note: '' },
-        { name: 'Whitestone Cheese 起司拼盤', type: '起司+酒', price: 'NZD $20–40', hours: '09:00–17:00', note: '' },
+        { name: 'Mall 美食街解決', type: '', price: '－', hours: '－', note: '簡報最新選定・長途開車後最省力' },
+        { name: 'Riverstone Kitchen（奧馬魯）', type: '當代歐式料理', price: 'NZD $50–80', hours: '09:00–16:00', note: 'SH1旁，原方案，需訂位' },
+        { name: 'Cucina（奧馬魯）', type: '義式料理', price: 'NZD $30–55', hours: '11:30–21:00', note: '' },
       ],
     },
   },
@@ -324,7 +351,7 @@ const DAYS = [
     coords: [-43.5320, 172.6362],
     route: { text: '市區 → 基督城機場 → 奧克蘭', km: 20, ok: true, note: '還車後採買伴手禮，午前離境' },
     timeline: [
-      { time: '上午', text: '還車・採買伴手禮' },
+      { time: '上午', text: '12人座車還車 → 採買伴手禮' },
       { time: '中午', text: '機場離境（基督城 → 奧克蘭）' },
       { time: '13:25', text: '抵達奧克蘭，取北島車，北島開始！' },
     ],
@@ -353,10 +380,12 @@ const DAYS = [
     photo: 'auckland+viaduct+harbour+night',
     coords: [-36.8485, 174.7633],
     route: { text: '奧克蘭機場 → 市區', km: 25, ok: true, note: '機場到市區約45分鐘' },
+    stay: '奧克蘭市區',
+    warnings: ['🏍️ 北島路段部分人騎重機、其他人坐12人座車照原行程，車款（7選項，NZD $9,350–$17,000/3天）與騎乘天數/會合點尚未決定，詳見行前必讀面板'],
     timeline: [
       { time: '13:25', text: '抵達奧克蘭，取車' },
       { time: '15:00', text: '入住市區，輕裝出發' },
-      { time: '16:00', text: 'Viaduct Harbour 遊艇港區散步' },
+      { time: '16:00', text: 'Viaduct Harbour 遊艇港區散步（午餐可在The Store解決）' },
       { time: '傍晚', text: 'Mission Bay 海灘夕陽' },
     ],
     attractions: [
@@ -366,7 +395,9 @@ const DAYS = [
     ],
     meals: {
       breakfast: [],
-      lunch: [],
+      lunch: [
+        { name: 'The Store', type: '精品咖啡與當代輕食（Britomart區）', price: 'NZD $15–30', hours: '07:00–16:00', note: '已選定' },
+      ],
       dinner: [
         { name: 'Depot Eatery & Oyster Bar', type: 'NZ海鮮分享盤', price: 'NZD $50–80', hours: '週一-五07:00–21:00 / 週六11:00–21:30', note: '無訂位，可能等候' },
         { name: 'Alma', type: '西班牙小盤料理', price: 'NZD $50–75', hours: '12:00–22:00', note: '' },
@@ -380,6 +411,7 @@ const DAYS = [
     photo: 'hobbiton+movie+set+new+zealand',
     coords: [-37.8578, 175.6824],
     route: { text: '奧克蘭 → Matamata (SH1/SH27) → 返回', km: 200, ok: true, note: '大巴06:00出發，不需自駕' },
+    stay: '奧克蘭市區',
     timeline: [
       { time: '06:00', text: '出發哈比村大巴（已預訂）' },
       { time: '09:00', text: '抵達 The Shire\'s Rest，開始導覽（2.5小時）' },
@@ -414,6 +446,7 @@ const DAYS = [
     photo: 'waitomo+glowworm+caves+new+zealand',
     coords: [-38.2614, 175.1058],
     route: { text: '奧克蘭 → Waitomo (SH1→SH3) → 返回', km: 200, ok: true, note: '大巴13:30出發，上午奧克蘭自由活動' },
+    stay: '奧克蘭市區',
     timeline: [
       { time: '上午', text: '奧克蘭自由活動（Sky Tower / 博物館）' },
       { time: '13:30', text: '出發懷托摩螢火蟲洞導覽（已預訂）' },
@@ -449,15 +482,18 @@ const DAYS = [
     photo: 'hamilton+gardens+new+zealand',
     coords: [-37.7870, 175.2793],
     route: { text: '奧克蘭 → Hamilton (SH1) → Putaruru Blue Spring → Tauranga (SH26/SH29)', km: 180, ok: true, note: '完全順路：Hamilton Gardens → Blue Spring → Tauranga依序排列' },
+    stay: 'Tauranga',
     timeline: [
       { time: '08:30', text: '出發' },
       { time: '10:00', text: '🌸 Hamilton Gardens（世界級主題花園，免費）' },
+      { time: '11:00', text: '🚗 Classics Museum（新增：Hamilton經典/骨董車展示館）' },
       { time: '12:00', text: 'Hamilton 午餐' },
       { time: '14:00', text: '💧 Putaruru Blue Spring（Te Waihou步道）' },
       { time: '16:30', text: '抵達 Tauranga' },
     ],
     attractions: [
       { icon: '🌸', name: 'Hamilton Gardens', desc: '世界級主題庭園，中日義毛利等主題花園，主庭10:00–17:00', hours: '主題庭 10:00–17:00 / 外圍 06:15–21:00', price: '主題庭需購票', lat: -37.8053, lng: 175.3019 },
+      { icon: '🚗', name: 'Classics Museum', desc: '新增景點，Hamilton經典車與骨董車收藏展示館', hours: '10:00–16:00', price: '需購票', lat: -37.7940, lng: 175.2790 },
       { icon: '💧', name: 'Putaruru Blue Spring', desc: '全球最清澈淡水泉，湛藍泉水，Te Waihou步道來回1.5小時', hours: '全天', price: '免費', lat: -38.0564, lng: 175.7850 },
       { icon: '⛰️', name: 'Mauao（Mount Maunganui）', desc: '抵達Tauranga後傍晚上山，火山錐環形步道，360度海景', hours: '全天', price: '免費', lat: -37.6361, lng: 176.1855 },
     ],
@@ -484,15 +520,18 @@ const DAYS = [
     photo: 'cathedral+cove+coromandel+new+zealand',
     coords: [-36.8322, 175.7017],
     route: { text: 'Tauranga → Waihi Beach → Karangahake Gorge → Thames → Whitianga (SH25)', km: 200, ok: true, note: '沿半島海岸線北上，完全順路' },
+    stay: 'Whitianga',
     timeline: [
       { time: '08:30', text: '出發，Tauranga → Waihi Beach' },
       { time: '10:00', text: '🏖️ Waihi Beach 海灘散步' },
       { time: '11:30', text: '⛏️ Karangahake Gorge 峽谷步道（金礦隧道，1–2小時）' },
       { time: '13:30', text: '午餐（Thames 鎮）' },
-      { time: '15:30', text: '抵達 Whitianga，Cathedral Cove 水上計程車' },
+      { time: '15:30', text: '抵達 Whitianga，Cathedral Cove（Mautohe）水上計程車' },
+      { time: '晚上', text: '♨️ The Lost Spring（新增：熱帶叢林地熱溫泉SPA）' },
     ],
     attractions: [
-      { icon: '🌊', name: 'Cathedral Cove 海蝕拱門', desc: '水上計程車最方便（10月可開車至Hahei），步行來回2.5小時', hours: '全天（步道）', price: 'NZD $20（水上計程車）', lat: -36.8413, lng: 175.7805 },
+      { icon: '🌊', name: 'Cathedral Cove（Mautohe / Te Whanganui-A-Hei）', desc: '水上計程車最方便（10月可開車至Hahei），步行來回2.5小時', hours: '全天（步道）', price: 'NZD $20（水上計程車）', lat: -36.8413, lng: 175.7805 },
+      { icon: '♨️', name: 'The Lost Spring', desc: '新增：Whitianga熱帶叢林造景地熱溫泉SPA，適合晚上放鬆，需預訂', hours: '10:00–22:00', price: 'NZD $55起', lat: -36.8281, lng: 175.7014 },
       { icon: '♨️', name: 'Hot Water Beach 熱水沙灘', desc: '退潮前後各2小時挖溫泉坑，租鏟子NZD $7', hours: '全天（依潮汐）', price: '免費（鏟子 NZD $7）', lat: -36.8908, lng: 175.7942 },
       { icon: '⛏️', name: 'Karangahake Gorge 步道', desc: '穿越金礦隧道，河谷風景極美，約1–2小時，免費', hours: '全天', price: '免費', lat: -37.3660, lng: 175.7160 },
     ],
@@ -518,6 +557,8 @@ const DAYS = [
     photo: 'coromandel+town+new+zealand',
     coords: [-36.7590, 175.4953],
     route: { text: 'Whitianga → Coromandel Town (SH25) → Thames → 奧克蘭 (SH2/SH1)', km: 220, ok: true, note: '半島西海岸繞一圈完整，沿SH25回奧克蘭完全順路' },
+    stay: '奧克蘭',
+    warnings: ['Amano 位於 Quay Street，奧克蘭有同名/類似分店，訂位前務必核對地址避免跑錯'],
     timeline: [
       { time: '08:00', text: '出發' },
       { time: '09:30', text: '🚂 Driving Creek Railway（窄軌鐵路穿越原生林，1小時）' },
@@ -541,9 +582,9 @@ const DAYS = [
         { name: 'Driving Creek Café', type: '', price: 'NZD $10–25', hours: '09:00–16:00', note: '鐵路旁' },
       ],
       dinner: [
-        { name: 'Depot Eatery', type: '海鮮分享盤', price: 'NZD $50–80', hours: '07:00–21:00', note: '返回奧克蘭後' },
+        { name: 'Amano (Quay Street 店)', type: '義大利菜/現代歐陸+手工烘焙', price: 'NZD $60–100', hours: '17:00–22:00', note: '已選定・注意地點是Quay Street' },
+        { name: 'Depot Eatery', type: '海鮮分享盤', price: 'NZD $50–80', hours: '07:00–21:00', note: '' },
         { name: 'Alma', type: '西班牙料理', price: 'NZD $50–75', hours: '12:00–22:00', note: '' },
-        { name: 'Metita', type: '太平洋島嶼料理', price: 'NZD $90–130', hours: '17:30–22:00', note: '需訂位' },
       ],
     },
   },
